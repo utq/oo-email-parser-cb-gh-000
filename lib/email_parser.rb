@@ -10,8 +10,6 @@ class EmailParser
   end
 
    def parse
-    self.emails.split(", ").map do |e|
-      e.split(" ").flatten.uniq
-    end
+    self.emails.split(", ").map{|e| e.split(" ")}.flatten.uniq
   end
 end
